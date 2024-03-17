@@ -2,6 +2,8 @@
 ## functions do
 
 ## Write a short comment describing this function
+## The "makeCacheMatrix" function makes a matrix object that can cache its inverse value
+## The value "x" has been set as a matrix to then solve "inv" as a NULL
 
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
@@ -17,6 +19,9 @@ makeCacheMatrix <- function(x = matrix()) {
          getinv = getinv)
   }
 ## Write a short comment describing this function
+## cacheSolve is the function that computes the inverse of the mean returned by
+## "makeCacheMatrix" above
+## "..." allows for further arguments to be passed to solve the function 
 
 cacheSolve <- function(x, ...) {
   inv <- x$getinv()
